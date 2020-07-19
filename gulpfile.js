@@ -1,4 +1,3 @@
-
 const {
   src, dest, series, parallel, watch,
 } = require('gulp');
@@ -6,6 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
+const plumber = require('gulp-plumber');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const imgCompress = require('imagemin-jpeg-recompress');
@@ -28,9 +28,10 @@ const build = 'build';
 
 function html(cb) {
   src(`${source}/*.pug`)
+    .pipe(plumber())
     .pipe(pug({
       pretty: true,
-    }).on('error', gutil.log))
+    }))
     .pipe(rename({
       extname: '.html',
     }))
