@@ -1,0 +1,34 @@
+.map {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    @include size-vw(78, 78);
+
+    background-image: url('./img/header/map-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 3px 20px 0 rgba(68, 68, 68, 0.11);
+  }
+
+  &__text {
+    @include margin-left-vw(20);
+    @include font-vw(16);
+
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+
+  &__show {
+    @include font-vw(12);
+    @include margin-top-vw(10);
+
+    display: inline-block;
+    color: $attention;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px dashed $attention;
+  }
+}

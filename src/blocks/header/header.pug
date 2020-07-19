@@ -1,0 +1,30 @@
+header.header
+  .header__info
+    a.logo.header__logo
+      img(src="./img/header/logo.png", alt="Студия депиляции")
+    span.header__brief Студия депиляции и массажный кабинет в Бресте
+    .map
+      .map__icon
+      .map__text Мы находимся в центре:<br>
+        span.bold г. Брест, ул. Гоголя, д.65<br>
+        .map__show Смотреть на карте
+    .contacts.header__contacts
+      .phone
+        .icon.icon_size_normal
+          svg
+            use(xlink:href="icons/sprite.svg#phone-icon")
+        span.phone__text
+          span.phone__indicator
+          span Звоните, мы сейчас работаем<br>
+            a.phone__number(href="tel:+375333822499") +375 33 382 24 99
+      .schedule.contacts__schedule
+        .icon.icon_size_normal
+          svg
+            use(xlink:href="icons/sprite.svg#clock-icon")
+        span.schedule__text Пн-Вс
+          span.bold  9:00-21:00
+    .booking.header__booking
+      button.btn.btn_style_light.btn_size_sm Записаться онлайн
+  nav.nav.header__nav
+    each item in ['Главная', 'Шугаринг и депиляция воском', 'Антицеллюлитный массаж', 'Классический массаж', 'Обучение', 'Косметика для мастеров', 'Статьи', 'О студии', 'Контакты']
+      a.nav__item= item

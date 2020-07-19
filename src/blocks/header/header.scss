@@ -1,0 +1,41 @@
+.header {
+  width: 100vw;
+  min-height: 100vh;
+  background-image:
+    url('img/header/header-wave.svg'),
+    url('img/header/header-bgr.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center, center;
+  background-size: 100%, cover;
+
+  &__info {
+    @include padding-top-vw(30);
+
+    display: flex;
+    align-items: center;
+    padding-right: 10.156vw;
+    padding-left: 10.156vw;
+  }
+
+  &__logo {
+    @include width-vw(280);
+  }
+
+  &__brief {
+    @include font-vw(14);
+    @include margin-left-vw(44);
+    @include width-vw(165);
+
+    margin-right: auto;
+    line-height: normal;
+    letter-spacing: 0.05em;
+  }
+
+  &__contacts {
+    @include margin-left-vw(65);
+  }
+
+  &__booking {
+    @include margin-left-vw(60);
+  }
+}

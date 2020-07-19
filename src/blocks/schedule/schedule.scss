@@ -1,0 +1,10 @@
+.schedule {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    letter-spacing: 0.05em;
+
+    @include margin-left-vw(12);
+  }
+}

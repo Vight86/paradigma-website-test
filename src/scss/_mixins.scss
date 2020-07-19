@@ -1,0 +1,48 @@
+@mixin size-vw($width-px, $height-px) {
+  width: $width-px / 1920 * 100 + vw;
+  height: $height-px / 1920 * 100 + vw;
+}
+
+@mixin width-vw($width-px) {
+  width: $width-px / 1920 * 100 + vw;
+}
+
+@mixin height-vw($height-px) {
+  width: $height-px / 1920 * 100 + vw;
+}
+
+@mixin font-vw($font-px) {
+  font-size: $font-px / 1920 * 100 + vw;
+}
+
+@mixin margin-right-vw($margin-right-px) {
+  margin-right: $margin-right-px / 1920 * 100 + vw;
+}
+
+@mixin margin-left-vw($margin-left-px) {
+  margin-left: $margin-left-px / 1920 * 100 + vw;
+}
+
+@mixin margin-top-vw($margin-top-px) {
+  margin-top: $margin-top-px / 1920 * 100 + vw;
+}
+
+@mixin margin-bottom-vw($margin-bottom-px) {
+  margin-bottom: $margin-bottom-px / 1920 * 100 + vw;
+}
+
+@mixin padding-right-vw($padding-right-px) {
+  padding-right: $padding-right-px / 1920 * 100 + vw;
+}
+
+@mixin padding-left-vw($padding-left-px) {
+  padding-left: $padding-left-px / 1920 * 100 + vw;
+}
+
+@mixin padding-top-vw($padding-top-px) {
+  padding-top: $padding-top-px / 1920 * 100 + vw;
+}
+
+@mixin padding-bottom-vw($padding-bottom-px) {
+  padding-bottom: $padding-bottom-px / 1920 * 100 + vw;
+}

@@ -1,0 +1,30 @@
+.phone {
+  display: flex;
+  align-items: flex-start;
+
+  &__indicator {
+    @include size-vw(6, 6);
+    @include margin-right-vw(10);
+
+    display: inline-block;
+    background-color: $success;
+    border-radius: 50%;
+  }
+
+  &__text {
+    @include font-vw(12);
+    @include margin-left-vw(12);
+
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+
+  &__number {
+    @include font-vw(24);
+
+    color: $primary;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+  }
+}

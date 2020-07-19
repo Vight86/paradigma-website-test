@@ -1,0 +1,18 @@
+.icon {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 20px 0 rgba(68, 68, 68, 0.11);
+
+  svg {
+    @include width-vw(15);
+
+    position: relative;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  &_size_normal {
+    @include size-vw(35, 35);
+  }
+}
