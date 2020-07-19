@@ -24,7 +24,7 @@ const del = require('del');
 sass.compiler = require('node-sass');
 
 const source = 'src';
-const build = 'build';
+const build = 'dist';
 
 function html(cb) {
   src(`${source}/*.pug`)
