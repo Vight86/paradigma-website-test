@@ -40,7 +40,7 @@ function html(cb) {
 }
 
 function styles(cb) {
-  src([`${source}/**/*.scss`, '!**/*.min.css'])
+  src(`${source}/style.scss`)
     .pipe(gulpif(argv.mapped, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
