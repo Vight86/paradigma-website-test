@@ -1,0 +1,39 @@
+.nav {
+  @include size-vw(1560, 60);
+  @include font-vw(15);
+
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr repeat(2, 2fr) 1fr 2fr repeat(3, 1fr);
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-align: center;
+  background-color: $white;
+  border-radius: 5px;
+
+  &::after {
+    @include size-vw(1524, 60);
+
+    position: absolute;
+    top: 0.4vw;
+    left: 50%;
+    z-index: 1;
+    background-color: $white;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    content: '';
+  }
+
+  &__item {
+    position: relative;
+    z-index: 5;
+    transition: 0.3s ease-out;
+
+    &:hover,
+    &_active {
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}

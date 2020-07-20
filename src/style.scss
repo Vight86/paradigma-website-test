@@ -2,12 +2,17 @@
 @import 'scss/font';
 @import 'scss/variables';
 @import 'scss/mixins';
+@import 'scss/animation';
 @import 'blocks/body/body';
 @import 'blocks/bold/bold';
 @import 'blocks/icon/icon';
 @import 'blocks/header/header';
+@import 'blocks/heart/heart';
 @import 'blocks/logo/logo';
 @import 'blocks/map/map';
 @import 'blocks/phone/phone';
 @import 'blocks/schedule/schedule';
 @import 'blocks/btn/btn';
+@import 'blocks/nav/nav';
+@import 'blocks/list/list';
+@import 'blocks/client-card/client-card';

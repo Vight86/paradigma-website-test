@@ -2,9 +2,14 @@
   display: flex;
   align-items: center;
 
-  &__text {
-    letter-spacing: 0.05em;
+  &__icon {
+    background-image: url('img/header/clock-icon.svg');
+  }
 
+  &__text {
     @include margin-left-vw(12);
+    @include font-vw(16);
+
+    letter-spacing: 0.05em;
   }
 }

@@ -1,15 +1,17 @@
 .header {
-  width: 100vw;
+  @include padding-bottom-vw(70);
+
+  position: relative;
+  width: 100%;
   min-height: 100vh;
-  background-image:
-    url('img/header/header-wave.svg'),
-    url('img/header/header-bgr.jpg');
+  background-image: url('img/header/header-bgr.jpg');
   background-repeat: no-repeat;
-  background-position: bottom center, center;
-  background-size: 100%, cover;
+  background-position: center;
+  background-size: cover;
 
   &__info {
     @include padding-top-vw(30);
+    @include margin-bottom-vw(15);
 
     display: flex;
     align-items: center;
@@ -37,5 +39,84 @@
 
   &__booking {
     @include margin-left-vw(60);
+  }
+
+  &__nav {
+    @include margin-left-vw(180);
+  }
+
+  &__title {
+    @include font-vw(48);
+    @include margin-left-vw(310);
+    @include margin-top-vw(110);
+    @include margin-bottom-vw(50);
+
+    position: relative;
+    z-index: 10;
+    line-height: 1.15;
+  }
+
+  &__list {
+    @include margin-left-vw(295);
+    @include width-vw(1600);
+    @include margin-bottom-vw(60);
+  }
+
+  &__btn {
+    @include margin-left-vw(295);
+    @include margin-bottom-vw(105);
+
+    position: relative;
+  }
+
+  &__client-card {
+    @include width-vw(863);
+
+    position: absolute;
+    top: 32vw;
+    left: 38vw;
+  }
+
+  &__arrow-down {
+    @include size-vw(32, 64);
+
+    position: absolute;
+    bottom: 4vw;
+    left: 50%;
+    z-index: 15;
+    background-image: url('img/header/arrow-down.png');
+    background-size: cover;
+    transform: translateX(-50%);
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation-name: blinking;
+      animation-duration: 4.5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      fill: none;
+      stroke: $white;
+
+      &:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.8s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 1.3s;
+      }
+    }
+  }
+
+  &__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }

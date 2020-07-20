@@ -1,0 +1,19 @@
+@keyframes blinking {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(5);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,75 @@
+.client-card {
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__info {
+    @include size-vw(175, 210);
+    @include font-vw(14);
+
+    position: absolute;
+    top: -9.9vw;
+    left: 1vw;
+    z-index: 5;
+    padding: 1.7vw 1.3vw 1.3vw;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.12em;
+    text-align: center;
+    background: url('img/header/client-card-info-bgr.png') no-repeat;
+    background-size: cover;
+    transform: scale(0);
+    transform-origin: left bottom;
+    transition: transform 0.3s ease-out;
+
+    span {
+      position: relative;
+      z-index: 5;
+    }
+
+    &::before {
+      @include size-vw(175, 210);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: block;
+      background: url('img/header/client-card-info-bgr.png') no-repeat;
+      background-size: cover;
+      opacity: 0.3;
+      transition: transform 0.3s 0.3s ease-out;
+      content: '';
+    }
+  }
+
+  &__icon {
+    @include width-vw(40);
+
+    position: absolute;
+    top: 10vw;
+    left: 17.3vw;
+    z-index: 7;
+    height: auto;
+
+    img {
+      position: relative;
+      z-index: 7;
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & .client-card__info {
+        transform: scale(1);
+
+        &::before {
+          transform: translate(0.521vw, -0.521vw);
+        }
+      }
+    }
+  }
+}

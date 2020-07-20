@@ -1,22 +1,78 @@
 .btn {
   font-family: $font-primary;
   border: none;
+  transition: 0.2s ease-in-out;
 
   &:focus {
     outline: none;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &_style_light {
     background-color: $light;
-    border-radius: 30px;
-    box-shadow: inset 0 -3px 0 $shadow;
+    background-image: url('./img/header/calendar-icon.svg');
+    background-repeat: no-repeat;
+    background-position: left 1.2vw center;
+    background-size: 1vw;
+    box-shadow: inset 0 -0.16vw 0 $shadow;
+  }
+
+  &_style_pink {
+    color: $white;
+    background-image: $btn-gradient;
+    box-shadow: inset 0 -0.26vw 0 $btn-shadow;
+
+    &:hover {
+      box-shadow: inset 0 -0.1vw 0 $btn-shadow;
+    }
+  }
+
+  &_with_branch {
+    img {
+      @include width-vw(231);
+
+      position: absolute;
+      top: 0.5vw;
+      left: 12.3vw;
+      height: auto;
+    }
   }
 
   &_size_sm {
     @include size-vw(228, 63);
     @include font-vw(15);
 
+    padding-left: 1.5vw;
     font-weight: 500;
     letter-spacing: 0.05em;
+    border-radius: 1.56vw;
+  }
+
+  &_size_md {
+    @include size-vw(379, 90);
+    @include font-vw(14);
+    @include padding-right-vw(120);
+
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 2.24vw;
+
+    &::before {
+      @include size-vw(379, 80);
+
+      position: absolute;
+      top: -0.07vw;
+      left: 0;
+      display: block;
+      background-color: $white;
+      border-radius: 2.24vw;
+      opacity: 0.1;
+      content: '';
+    }
   }
 }

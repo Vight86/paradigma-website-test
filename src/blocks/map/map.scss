@@ -20,15 +20,41 @@
     letter-spacing: 0.05em;
   }
 
+  &__yandex {
+    @include size-vw(395, 285) position: absolute;
+
+    top: 1.5vw;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 0 0.5vw $attention;
+    transform: scale(0);
+    transform-origin: 10% 0;
+    transition-delay: 0.3s;
+    transition-duration: 0.3s;
+  }
+
   &__show {
     @include font-vw(12);
     @include margin-top-vw(10);
 
-    display: inline-block;
-    color: $attention;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-bottom: 1px dashed $attention;
+    position: relative;
+
+    span {
+      color: $attention;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 0.05vw dashed $attention;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .map__yandex {
+        transform: scale(1);
+        transition-delay: 0.1s;
+        transition-timing-function: cubic-bezier(0.78, 1.1, 0.55, 1.28);
+        transition-duration: 0.3s;
+      }
+    }
   }
 }

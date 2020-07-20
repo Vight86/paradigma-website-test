@@ -1,0 +1,29 @@
+.list {
+  @include font-vw(18);
+
+  line-height: 2;
+  letter-spacing: 0.025em;
+
+  &__item {
+    @include padding-left-vw(37);
+
+    position: relative;
+
+    &::before {
+      @include size-vw(9, 9);
+
+      position: absolute;
+      top: 0.5vw;
+      left: 0.4vw;
+      display: block;
+      background-color: $white;
+      background-color: $attention-light;
+      border-color: $greyish-white;
+      border-style: solid;
+      border-width: 0.2vw;
+      border-radius: 50%;
+      box-shadow: 0 0 0.67vw $attention-shadow;
+      content: '';
+    }
+  }
+}

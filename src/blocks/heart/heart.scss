@@ -1,0 +1,24 @@
+.heart {
+  position: absolute;
+  z-index: 1;
+  height: auto;
+
+  &__left {
+    @include width-vw(330);
+
+    top: 14.5vw;
+    left: 6vw;
+  }
+
+  &__right {
+    @include width-vw(215);
+
+    top: 6.5vw;
+    right: -5vw;
+  }
+
+  &__mid {
+    top: 34vw;
+    left: 53vw;
+  }
+}
