@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
   background-image: url('img/header/header-bgr.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -92,7 +93,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      animation-name: blinking;
+      animation-name: waving;
       animation-duration: 4.5s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;

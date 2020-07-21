@@ -1,0 +1,25 @@
+.success {
+  @include font-vw(30);
+
+  letter-spacing: 0.025em;
+  text-align: center;
+  background-image: url('img/popup/popup-success-bgr.png');
+  background-size: cover;
+  border: 0.05208vw solid $lighter;
+  border-radius: 2.60417vw;
+
+  &__icon {
+    @include size-vw(90, 90);
+    @include margin-bottom-vw(20);
+  }
+
+  &__title {
+    font-weight: 700;
+
+    @include margin-bottom-vw(5);
+  }
+
+  &__subtitle {
+    font-weight: 300;
+  }
+}

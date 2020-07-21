@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   font-family: $font-primary;
   border: none;
   transition: 0.2s ease-in-out;
@@ -41,6 +42,17 @@
     }
   }
 
+  &_with_flower {
+    img {
+      @include width-vw(180);
+
+      position: absolute;
+      top: 0.9vw;
+      right: -3vw;
+      height: auto;
+    }
+  }
+
   &_size_sm {
     @include size-vw(228, 63);
     @include font-vw(15);
@@ -64,6 +76,31 @@
 
     &::before {
       @include size-vw(379, 80);
+
+      position: absolute;
+      top: -0.07vw;
+      left: 0;
+      display: block;
+      background-color: $white;
+      border-radius: 2.24vw;
+      opacity: 0.1;
+      content: '';
+    }
+  }
+
+  &_size_long {
+    @include size-vw(498, 80);
+    @include font-vw(18);
+    @include padding-right-vw(75);
+
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 2.24vw;
+
+    &::before {
+      @include size-vw(498, 80);
 
       position: absolute;
       top: -0.07vw;

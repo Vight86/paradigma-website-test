@@ -1,0 +1,32 @@
+.popup__bgr
+.popup__wrap
+  form.form.popup__form(name='get-program')
+    img.form__overlay(src="img/popup/book-overlay.png", alt="")
+    .form__close
+      svg(viewBox = '0 0 50 50')
+        line(x1 = 0 y1 = 0 x2 = 50 y2 = 50)
+        line(x1 = 50 y1 = 0 x2 = 0 y2 = 50)
+    h5.form__title <span class="bold">Получите</span> программу обучения
+    div.form__text.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    div.form__select(tabindex="0")
+      div.form__input.form__select-placeholder
+        span(data-value='Повышение квалификации') Повышение квалификации
+        svg.form__arrow(viewBox = '0 0 18 10')
+          polyline(points="0,0 9,10 18,0")
+      .form__select-options
+        div(data-value='Повышение квалификации') Повышение квалификации
+        div(data-value='Пункт меню 1') Пункт меню 1
+        div(data-value='Пункт меню 2') Пункт меню 2
+    input.form__input(type='text' name='name' placeholder='Ваше имя')
+    input.form__input(type='tel' name='phone' placeholder='Ваш номер телефона')
+    button.btn.form__submit.btn_style_pink.btn_size_long.btn_with_flower Получить программу
+      img(src="./img/popup/flower.png", alt="")
+  .success.popup__success
+    .form__close
+      svg(viewBox = '0 0 50 50')
+        line(x1 = 0 y1 = 0 x2 = 50 y2 = 50)
+        line(x1 = 50 y1 = 0 x2 = 0 y2 = 50)
+    img.success__icon(src='img/popup/popup-success-icon.svg' alt="")
+    div.success__title Ваш заказ принят.
+    div.success__subtitle Ожидайте звонка
