@@ -13,6 +13,10 @@
 
 @mixin font-vw($font-px) {
   font-size: $font-px / 1920 * 100 + vw;
+
+  @media screen and (max-width: $bp-lg) {
+    font-size: 0.875rem;
+  }
 }
 
 @mixin margin-right-vw($margin-right-px) {

@@ -8,9 +8,21 @@
   border: 0.05208vw solid $lighter;
   border-radius: 2.60417vw;
 
+  @media screen and (max-width: $bp-lg) {
+    font-size: 21px;
+    border: 1px solid #fbeeef;
+    border-radius: 40px;
+  }
+
   &__icon {
     @include size-vw(90, 90);
     @include margin-bottom-vw(20);
+
+    @media screen and (max-width: $bp-lg) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {

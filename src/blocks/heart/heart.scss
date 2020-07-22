@@ -8,6 +8,13 @@
 
     top: 14.5vw;
     left: 6vw;
+    height: auto;
+
+    @media screen and (max-width: $bp-lg) {
+      top: 200px;
+      left: 50px;
+      width: 180px;
+    }
   }
 
   &__right {
@@ -15,10 +22,22 @@
 
     top: 6.5vw;
     right: -5vw;
+
+    @media screen and (max-width: $bp-lg) {
+      top: 80px;
+      right: -40px;
+      width: 110px;
+    }
   }
 
   &__mid {
     top: 34vw;
     left: 53vw;
+
+    @media screen and (max-width: $bp-lg) {
+      top: 350px;
+      left: 55%;
+      width: 60px;
+    }
   }
 }

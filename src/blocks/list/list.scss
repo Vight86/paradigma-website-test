@@ -4,8 +4,16 @@
   line-height: 2;
   letter-spacing: 0.025em;
 
+  @media screen and (max-width: $bp-xs) {
+    line-height: 1.5;
+  }
+
   &__item {
     @include padding-left-vw(37);
+
+    @media screen and (max-width: $bp-lg) {
+      padding-left: 17px;
+    }
 
     position: relative;
 
@@ -24,6 +32,16 @@
       border-radius: 50%;
       box-shadow: 0 0 0.67vw $attention-shadow;
       content: '';
+
+      @media screen and (max-width: $bp-lg) {
+        top: 50%;
+        left: -5px;
+        width: 0.5em;
+        height: 0.5em;
+        border-width: 4px;
+        box-shadow: 0 0 5px $attention-shadow;
+        transform: translateY(-50%);
+      }
     }
   }
 }

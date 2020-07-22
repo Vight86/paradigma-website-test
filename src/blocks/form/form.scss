@@ -10,6 +10,11 @@
   border: 0.05208vw solid $lighter;
   border-radius: 2.604vw;
 
+  @media screen and (max-width: $bp-lg) {
+    border: 1px solid $lighter;
+    border-radius: 50px;
+  }
+
   &__overlay {
     @include width-vw(270);
 
@@ -17,6 +22,12 @@
     top: 9vw;
     left: -5.8vw;
     height: auto;
+
+    @media screen and (max-width: $bp-lg) {
+      top: 149px;
+      left: -63px;
+      width: 170px;
+    }
   }
 
   &__close {
@@ -43,6 +54,13 @@
       transform: scale(1.8);
       cursor: pointer;
     }
+
+    @media screen and (max-width: $bp-lg) {
+      top: 25px;
+      right: 40px;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &__title {
@@ -51,6 +69,11 @@
 
     font-weight: 300;
     text-align: center;
+
+    @media screen and (max-width: $bp-lg) {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -62,6 +85,12 @@
     line-height: 1.2;
     letter-spacing: 0.025em;
     text-align: center;
+
+    @media screen and (max-width: $bp-lg) {
+      position: relative;
+      z-index: 5;
+      font-size: 12px;
+    }
   }
 
   &__select {
@@ -71,6 +100,16 @@
     position: relative;
     margin: 0 auto 16px;
     outline: none;
+
+    @media screen and (max-width: $bp-lg) {
+      width: 350px;
+      height: 50px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: $bp-lg) {
+      width: 100%;
+    }
   }
 
   &__input {
@@ -94,6 +133,19 @@
       font-weight: 300;
       font-family: $font-primary;
     }
+
+    @media screen and (max-width: $bp-lg) {
+      width: 350px;
+      height: 50px;
+      font-size: 14px;
+      line-height: 50px;
+      border: 1px solid $lighter;
+      border-radius: 30px;
+    }
+
+    @media screen and (max-width: $bp-lg) {
+      width: 80%;
+    }
   }
 
   &__arrow {
@@ -107,14 +159,29 @@
     stroke: $close;
     stroke-linecap: round;
     stroke-width: 2;
+
+    @media screen and (max-width: $bp-lg) {
+      top: 50%;
+      right: 20px;
+      width: 12px;
+      height: 12px;
+      transform: translateY(-50%);
+    }
   }
 
   &__select-placeholder {
     z-index: 50;
+    padding-right: 35px;
     transition: 0.2s ease-in-out;
 
     &:hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: $bp-xs) {
+      padding-top: 10px;
+      padding-left: 10px;
+      line-height: 1;
     }
 
     &_active {
@@ -138,6 +205,13 @@
     opacity: 0;
     transition: 0.3s ease-in-out;
 
+    @media screen and (max-width: $bp-md) {
+      top: 20px;
+      left: 10%;
+      width: 80%;
+      padding-top: 40px;
+    }
+
     &_active {
       transform: translateY(0);
       visibility: visible;
@@ -153,6 +227,12 @@
       letter-spacing: 0.12em;
       border-bottom: 0.05208vw solid $lighter;
       transition: 0.3s ease-in-out;
+
+      @media screen and (max-width: $bp-md) {
+        height: 50px;
+        padding-top: 20px;
+        line-height: 1;
+      }
 
       &:hover {
         font-weight: 700;

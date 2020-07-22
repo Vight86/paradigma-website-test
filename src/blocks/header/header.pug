@@ -2,11 +2,16 @@ header.header
   img.heart.heart__left(src='/img/header/heart-left.png' alt="")
   img.heart.heart__mid(src='/img/header/heart-mid.png' alt="")
   img.heart.heart__right(src='/img/header/heart-right.png' alt="")
+  .header__menu-toggle
+    svg(viewBox='0 0 40 30')
+      line(x1="2" y1="2" x2="38" y2="2")
+      line(x1="2" y1="15" x2="38" y2="15")
+      line(x1="2" y1="28" x2="38" y2="28")
   .header__info
     a.logo.header__logo(href='#')
       img(src="./img/header/logo.png", alt="Студия депиляции")
     span.header__brief Студия депиляции и массажный кабинет в Бресте
-    .map
+    .map.header__map
       .map__icon
       .map__text Мы находимся в центре:<br>
         span.bold г. Брест, ул. Гоголя, д.65<br>
