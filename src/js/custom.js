@@ -67,6 +67,12 @@ const windowHeight = doc.clientHeight;
 
 doc.addEventListener('mousemove', (e) => {
   hearts.forEach((heart, i) => {
-    heart.setAttribute('style', `transform: translate(${-e.clientX / 30}px, ${-e.clientY / 20}px)`);
+    if (i == 0) {
+      heart.setAttribute('style', `transform: translate(${-e.clientX / 50}px, ${-e.clientY / 50}px)`);
+    } else if (i == 1) {
+      heart.setAttribute('style', `transform: translate(${-e.clientX / 10}px, ${-e.clientY / 10}px)`);
+    } else if (i == 2) {
+      heart.setAttribute('style', `transform: translate(${-e.clientX / 40}px, ${-e.clientY / 10}px)`);
+    }
   });
 });

@@ -3,8 +3,13 @@
 
   letter-spacing: 0.025em;
   text-align: center;
-  background-image: url('img/popup/popup-success-bgr.png');
+  background-image:
+    url('img/popup/popup-success-bgr.png'),
+    $gradient-primary;
+  background-repeat: no-repeat;
+  background-position: right -173px bottom -110px, center;
   background-size: cover;
+  background-size: 270px, auto;
   border: 0.05208vw solid $lighter;
   border-radius: 2.60417vw;
 

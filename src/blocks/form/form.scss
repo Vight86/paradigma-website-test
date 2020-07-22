@@ -3,10 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('./img/popup/form-bgr.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: $gradient-primary;
   border: 0.05208vw solid $lighter;
   border-radius: 2.604vw;
 

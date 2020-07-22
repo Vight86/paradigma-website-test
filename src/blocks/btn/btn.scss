@@ -57,11 +57,11 @@
 
   &_with_flower {
     img {
-      @include width-vw(180);
+      @include width-vw(230);
 
       position: absolute;
-      top: 0.9vw;
-      right: -3vw;
+      top: 0.6vw;
+      right: -4vw;
       height: auto;
 
       @media screen and (max-width: $bp-lg) {
